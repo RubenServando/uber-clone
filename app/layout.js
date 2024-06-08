@@ -1,4 +1,4 @@
-import { Inter } from "next/font/google";
+import { Inter, Montserrat } from "next/font/google";
 import "./globals.css";
 import {
   ClerkProvider,
@@ -9,7 +9,7 @@ import {
 } from '@clerk/nextjs'
 import Header from "@/components/Header"
 
-const inter = Inter({ subsets: ["latin"] });
+const font = Montserrat({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Create Next App",
@@ -20,14 +20,14 @@ export default function RootLayout({ children }) {
   return (
     <ClerkProvider>
     <html lang="en">
-      <body className={inter.className}>
+      <body className={font.className}>
         <Header />
         <SignedOut>
           <SignInButton />
         </SignedOut>
-        <SignedIn>
+        {/* <SignedIn>
           <UserButton />
-        </SignedIn>
+        </SignedIn> */}
         {children}
         </body>
     </html>
