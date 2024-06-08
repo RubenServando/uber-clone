@@ -23,6 +23,14 @@ function Header() {
             <Image src='/logo.png'
             width={70} height={70}
             alt='Logo'/>
+            <div>
+                {headerMenu.map((item)=> (
+                    <div>
+                        <Image src={item.icon}
+                        width={17} height={17}/>
+                    </div>
+                ))}
+            </div>
         </div>
     </div>
   )
