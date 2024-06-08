@@ -23,11 +23,12 @@ function Header() {
             <Image src='/logo.png'
             width={70} height={70}
             alt='Logo'/>
-            <div>
+            <div className='flex gap-6 items-center'>
                 {headerMenu.map((item)=> (
                     <div>
                         <Image src={item.icon}
-                        width={17} height={17}/>
+                        width={27} height={27}/>
+                        <h2 className='text-[14] font-medium'>{item.name}</h2>
                     </div>
                 ))}
             </div>
